@@ -1,0 +1,5 @@
+API:6F5B663A-5BAD-4F0B-B621-199E80D03F27
+        Principal: abouhlel@42NICE.FR
+
+  Issued                Expires               Principal
+Jan 16 11:45:05 2021  Jan 16 21:45:05 2021  krbtgt/42NICE.FR@42NICE.FR
