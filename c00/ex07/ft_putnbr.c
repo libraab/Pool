@@ -35,3 +35,8 @@ void	ft_putnbr(int nb)
 	else
 		ft_putchar(x + '0');
 }
+
+/*int main(void)
+{
+	ft_putnbr(-42);
+}*/

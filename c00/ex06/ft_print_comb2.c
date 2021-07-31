@@ -12,17 +12,9 @@
 
 #include <unistd.h>
 
-void	ft_print_comb2(void);
-
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-void	ft_putchars(void)
-{
-	ft_putchar(',');
-	ft_putchar(' ');
 }
 
 void	ft_print_comb2(void)
@@ -42,9 +34,14 @@ void	ft_print_comb2(void)
 			ft_putchar('0' + (cd / 10));
 			ft_putchar('0' + (cd % 10));
 			if (ab != 98)
-				ft_putchars();
+				write(1, ", ", 2);
 			cd++;
 		}
 		ab++;
 	}
 }
+
+/*int main(void)
+{
+	ft_print_comb2()
+}*/

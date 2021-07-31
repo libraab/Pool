@@ -14,20 +14,20 @@
 
 int	main(int argc, char *argv[])
 {
-	int	pos;
 	int	i;
+	int	j;
 
 	i = 1;
 	while (i < argc)
 	{
-		pos = 0;
-		while (argv[i][pos] != '\0')
+		j = 0;
+		while (argv[i][j])
 		{
-			write(1, &argv[i][pos], 1);
-			pos = pos + 1;
+			write(1, &argv[i][j], 1);
+			j++;
 		}
 		write(1, &"\n", 1);
-		i = i + 1;
+		i++;
 	}
 	return (0);
 }

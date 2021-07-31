@@ -24,12 +24,6 @@ void	ft_putchars(char a, char b, char c)
 	ft_putchar(c);
 }
 
-void	ft_char(void)
-{
-	ft_putchar(',');
-	ft_putchar(' ');
-}
-
 void	ft_print_comb(void)
 {
 	int a;
@@ -48,10 +42,16 @@ void	ft_print_comb(void)
 				ft_putchars(a, b, c);
 				c++;
 				if (a != '7')
-					ft_char();
+					write(1, ", ", 2);
 			}
 			b++;
 		}
 		a++;
 	}
 }
+
+/*int main(void)
+{
+	ft_print_comb();
+	return(0);
+}*/

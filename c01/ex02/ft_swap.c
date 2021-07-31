@@ -18,3 +18,19 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = temporary;
 }
+
+/*#include <stdio.h>
+int main(void)
+{
+	int x = 55;
+	int y = 33;
+
+	int *i;
+	int *j;
+
+	i = &x;
+	j = &y;
+
+	ft_swap(i, j);
+	printf("%d", x);
+}*/

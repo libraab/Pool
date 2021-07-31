@@ -21,7 +21,7 @@
 			return (1);
 	while (power > 0)
 	{
-		i = nb * i;
+		i = i * nb;
 		power--;
 	}
 	return (i);

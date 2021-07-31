@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_alpha(char *str)
+int	ft_str_is_alpha(char *str)
 {
 	int i;
 
@@ -25,3 +25,9 @@ int		ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
+/*#include <stdio.h>
+int main(void)
+{
+	char x[] = "Asma";
+	printf("%d", ft_str_is_alpha(x));
+}*/

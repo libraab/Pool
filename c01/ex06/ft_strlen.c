@@ -10,14 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int wordcount;
+	int i;
 
-	wordcount = 0;
-	while (str[wordcount] != '\0')
-	{
-		wordcount++;
-	}
-	return (wordcount);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
+
+#include <stdio.h>
+int main(void)
+{
+	char *x = "Hello Asma";
+	int y;
+	y = ft_strlen(x);
+	printf("%d", y);
 }

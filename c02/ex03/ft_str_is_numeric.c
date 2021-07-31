@@ -10,13 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_str_is_numeric(char *str)
+int	ft_str_is_numeric(char *s)
 {
-	while (*str)
+	while (*s)
 	{
-		if (*str < '0' || *str > '9')
+		if (*s < '0' || *s > '9')
 			return (0);
-		str++;
+		s++;
 	}
 	return (1);
 }
+
+/*#include <stdio.h>
+int main(void)
+{
+	char x[] = "0123456789";
+	printf("%d", ft_str_is_numeric(x));
+}*/

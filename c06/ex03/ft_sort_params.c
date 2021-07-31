@@ -12,57 +12,44 @@
 
 #include <unistd.h>
 
-void	ft_putstr(int argc, char *argv[])
+void	ft_putstr(char *str)
 {
-	int		i;
-	int		j;
+	int	i;
 
-	i = 1;
-	while (i < argc)
-	{
-		j = 0;
-		while (argv[i][j] != '\0')
-		{
-			write(1, &argv[i][j], 1);
-			j++;
-		}
-		write(1, &"\n", 1);
-		i++;
-	}
+	i = 0;
+	while (str[i++])
+		write(1, &str[i], 1);
 }
 
-int		ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-	int		a;
+	int	a;
 
 	a = 0;
-	while (s1[a] != '\0' && s2[a] != '\0' && s1[a] == s2[a])
+	while (s1[a] && s2[a] && s1[a] == s2[a])
 		a++;
 	return (s1[a] - s2[a]);
 }
 
-int		main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
-	char	*ptr;
-	int		i;
-	int		j;
+	char	*t;
+	int	i;
+	int	j;
 
 	i = 1;
-	while (i < argc)
+	while (i++ < argc)
 	{
-		j = i;
-		while (j > 1)
+		j = 0;
+		while (j+1 < argc)
 		{
-			if (ft_strcmp(argv[j - 1], argv[j]) > 0)
+			if (ft_strcmp(argv[j], argv[j+1]) < 0)
 			{
-				ptr = argv[j - 1];
-				argv[j - 1] = argv[j];
-				argv[j] = ptr;
+				t = argv[j];
+				argv[j] = argv[j+1];
+				argv[j+1] = t;
 			}
-			j--;
+			j++;
 		}
-		i++;
-	}
-	ft_putstr(argc, argv);
 	return (0);
 }

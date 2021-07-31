@@ -12,12 +12,15 @@
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_is_negative(int nb)
 {
-	write(1, &c, 1);
+	if (nb < 0)
+		write(1, "N", 1);
+	else
+		write(1, "P", 1);//zero is positive
 }
 
-void	ft_is_negative(int n)
+/*int main(void)
 {
-	ft_putchar((n < 0) ? 'N' : 'P');
-}
+	ft_is_negative(-42); 
+}*/
